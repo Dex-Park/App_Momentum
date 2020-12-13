@@ -2,27 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/momentum.css"/>
     <title>Document</title>
 </head>
 <body>
-    <div class="js-clock">
-       <h1>00:00</h1>         
+    <div class="js-weather-container">
+        <span class="js-weather"></span>
+        <span class="js-weahter-icon"></span>
     </div>
+    <div class="time">
+        <div class="main-time">
+            <span class="hours"></span>
+            <span class="dot">:</span>
+            <span class="minutes"></span>
+        </div>
+        <div class="sub-time">
+            <span class="time-period"></span>
+            <span class="seconds"></span>
+        </div>
+    </div>
+    <span class="date"></span>
     <form class="js-form form">
-        <input type="text" placeholder="What is your name?"/>
+        <input type="text" placeholder="사용자의 이름을 적어주세요."/>
     </form>
     <h4 class="js-greetings greetings"></h4>
     <form class="js-toDoForm">
-        <input type="text" placeholder="Write a to do" />
+        <input type="text" placeholder="오늘의 할 일을 적어주세요." />
     </form>
     <ul class="js-toDoList"></ul>
-    <spanc class="js-weather"></spanc>
-    
+    <!-- javascript -->
     <script src="js/clock.js"></script>
-    <script src="js/gretting.js"></script>
+    <script src="js/greetings.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/bg.js"></script>
     <script src="js/weather.js"></script>
+</body>
 </html>

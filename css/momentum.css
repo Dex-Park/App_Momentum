@@ -1,0 +1,128 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgotic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+
+* {
+    font-family: 'Nanum Barun Gothic';
+    text-align: center;
+}
+
+.time {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.main-time {
+    display: flex;
+    padding-bottom: 30px;
+}
+
+.sub-time {
+    flex-direction: column;
+    margin-inline-start: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-time span {
+    font-size: 168px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.sub-time .time-period {
+    align-items: flex-end;
+    font-size: 38px;
+    font-weight: 300;
+    opacity: 0.7;
+    letter-spacing: 1px;
+    display: flex;
+    padding-block-end: 20px;
+}
+
+.sub-time .seconds {
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: flex-end;
+    padding-block-end: 17px;
+    font-size: 48px;
+}
+
+.date {
+    color:#ffffff;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.form,
+.greetings {
+    display: none;
+}
+
+.showing {
+    color:#ffffff;
+    font-size: 20px;
+    display: block;
+}
+
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.bgImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeIn .5s linear;
+}
+
+.js-weather-container {
+    text-align: right;
+}
+
+.js-weather-container .js-weather {
+    position: absolute;
+    right: 5%;
+    top: 25px;
+    color: white;
+}
+
+.js-form input,
+.js-toDoForm input {
+    margin-top: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 200px;
+    height: 30px;
+}
+
+.js-toDoList {
+    list-style: none;
+    padding-left: 0;
+    color: white;
+}
+
+.js-toDoList li {
+    margin: 7px;
+}
+
+.js-toDoList span:nth-child(2) {
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 0 4px;
+    margin-left: 10px;
+}
+.js-toDoList span:nth-child(2):active {
+    background-color: greenyellow;
+}
+

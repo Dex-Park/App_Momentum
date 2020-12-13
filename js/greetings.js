@@ -3,7 +3,7 @@ const form = document.querySelector(".js-form"),
       greeting = document.querySelector(".js-greetings");
 
 const USER_LS = "currentUser",
-      SHOWING_CN = "showing";
+      SHOWING = "showing";
 
 function saveName(text) {
     localStorage.setItem(USER_LS, text);
@@ -17,14 +17,14 @@ function handleSubmit(event) {
 }
 
 function askForName() {
-    form.classList.add(SHOWING_CN);
+    form.classList.add(SHOWING);
     form.addEventListener("submit", handleSubmit);
 }
 
 function paintGreeting(text) {
-    form.classList.remove(SHOWING_CN);
-    greeting.classList.add(SHOWING_CN);
-    greeting.innerText = `Hello ${text}`;
+    form.classList.remove(SHOWING);
+    greeting.classList.add(SHOWING);
+    greeting.innerText = `환영합니다. ${text}님`;
 }
 
 function loadName() {
