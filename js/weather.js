@@ -1,6 +1,6 @@
 const weahterContainer = document.querySelector(".js-weather-container");
 const weather = weahterContainer.querySelector(".js-weather");
-const weahterIcon = weahterContainer.querySelector(".js-weahter-icon");
+const weatherIcon = weahterContainer.querySelector(".js-weahter-icon");
 
 const API_KEY = "35042961b4457ffdc0c29c9baf3608c4";
 const COORDS = 'coords';
@@ -17,7 +17,7 @@ function getWeather(lat, lon) {
         const weather_img = new Image();
         const weather_icon = json.weather[0].icon;
         weather_img.src = `http://openweathermap.org/img/wn/${weather_icon}.png`;
-        weahterIcon.appendChild(weather_img);
+        weatherIcon.appendChild(weather_img);
         weather.innerText = `${temperature} @ ${place}`
 
     });
@@ -43,7 +43,7 @@ function handleGeoError() {
 }
 
 function askForCoords() {
-    navigator.geolocation.getCurrentPosition(handleGeoSuccess, handleGeoError)
+    navigator.geolocation.getCurrentPosition(handleGeoSuccess, handleGeoError);
 }
 
 function loadCoords() {

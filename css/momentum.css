@@ -107,9 +107,15 @@
 }
 
 .js-toDoList {
+    overflow: scroll;
+    height: 130px;
     list-style: none;
     padding-left: 0;
     color: white;
+}
+
+.js-toDoList::-webkit-scrollbar {
+    display: none;
 }
 
 .js-toDoList li {
@@ -117,12 +123,13 @@
 }
 
 .js-toDoList span:nth-child(2) {
+    font-weight: 600;
     border: 1px solid white;
     border-radius: 50px;
     padding: 0 4px;
     margin-left: 10px;
 }
-.js-toDoList span:nth-child(2):active {
+.js-toDoList span:nth-child(2):hover {
     background-color: greenyellow;
 }
 
